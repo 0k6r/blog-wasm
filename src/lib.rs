@@ -1,5 +1,7 @@
 mod utils;
 
+mod error;
+
 use wasm_bindgen::prelude::*;
 use web_logger;
 
