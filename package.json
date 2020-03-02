@@ -9,7 +9,7 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "start": "parcel static/index.html -p 8000 --open",
+    "start": "WASM_PACK_PROFILE=dev parcel static/index.html -p 8000 --open",
     "test": "wasm-pack test --node"
   },
   "devDependencies": {
