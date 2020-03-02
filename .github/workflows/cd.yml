@@ -1,0 +1,30 @@
+name: deploy
+
+on:
+  push:
+    tags: 
+      - "v*.*.*"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Installing needed Ubuntu dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libwebkit2gtk-4.0-37 libwebkit2gtk-4.0-dev
+    - uses: actions/checkout@v1
+    - name: Install wasm-pack
+      run: cargo install wasm-pack
+    - name: Build
+      run: |
+        npm run install
+        npm run build
+        cargo build --verbose -p blog-wasm --release
+
+    - name: Deploy to DigitalOcean
+      with:
+        CLEAN_EXCLUDE: "[\".gitignore\", \"README.md\"]"
+# TODO Need add action to deploy in DigitalOcean
