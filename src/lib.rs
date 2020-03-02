@@ -14,6 +14,7 @@ extern {
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, game-of-life!");
+pub fn run_app() -> Result<(), JsValue> {
+    alert("Hello, World!");
+    Ok(())
 }
