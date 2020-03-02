@@ -1,6 +1,7 @@
 mod utils;
 
 use wasm_bindgen::prelude::*;
+use web_logger;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -16,5 +17,6 @@ extern {
 #[wasm_bindgen]
 pub fn run_app() -> Result<(), JsValue> {
     alert("Hello, World!");
+    web_logger::init();
     Ok(())
 }
