@@ -34,6 +34,16 @@ wee_alloc = { version = "0.4.5", optional = true }
 web_logger = "0.2.0"
 log = "0.4.8"
 
+# Date and Time for Rust.
+chrono = { version = "0.4.10", features = ["serde"] }
+
+# Serde is a framework for serializing and deserializing Rust data structures efficiently and generically.
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+#This library provides a convenient derive macro for the standard library's [`std::error::Error`] trait.
+thiserror = "1"
+
 [dev-dependencies]
 wasm-bindgen-test = "0.3"
 
