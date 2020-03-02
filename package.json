@@ -1,0 +1,20 @@
+{
+  "author": "Konstantin Petrov <oku6er@gmail.com>",
+  "name": "blog-wasm",
+  "version": "0.1.0",
+  "description": "Blog app built with Rust and WebAssembly.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0k6r/blog_webasm.git"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "parcel static/index.html -p 8000 --open",
+    "test": "wasm-pack test --node"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-wasm.rs": "^1.2.15",
+    "typescript": "^3.8.3"
+  }
+}

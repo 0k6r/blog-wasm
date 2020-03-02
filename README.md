@@ -4,5 +4,6 @@
 ### TODO:
 
 
--[ ] Need add dependencies
--[ ] Need update readme.
+- [ ] Need add dependencies
+- [ ] Need update readme.
+- [ ] Create Hello World Asm
