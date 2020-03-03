@@ -1,7 +1,7 @@
 {
   "author": "Konstantin Petrov <oku6er@gmail.com>",
   "name": "blog-wasm",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "description": "Blog app built with Rust and WebAssembly.",
   "repository": {
     "type": "git",

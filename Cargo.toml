@@ -1,7 +1,7 @@
 [package]
 name = "blog-wasm"
 categories = ["wasm"]
-version = "0.1.0"
+version = "0.0.3"
 authors = ["Konstantin Petrov <oku6er@gmail.com>"]
 description = "Blog app built with Rust and WebAssembly."
 repository = "https://github.com/0k6r/blog_webasm.git"
