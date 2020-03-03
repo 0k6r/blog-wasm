@@ -34,3 +34,21 @@ jobs:
         TARGET: ${{ secrets.REMOTE_TARGET }}
       with:
         CLEAN_EXCLUDE: "[\".gitignore\", \"README.md\"]"
+
+    - name: Package
+      shell: bash
+      run: |
+        tar czvf target/blog-wasm.tar.gz blog-wasm/dist
+        zip -r target/blog-wasm.zip blog-wasm/dist
+        shasum -a 256 target/blog-wasm.tar.gz > target/conduit-wasm.tar.gz.sha256
+        shasum -a 256 target/blog-wasm.zip > target/conduit-wasm.zip.sha256
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          target/blog-wasm.tar.gz
+          target/blog-wasm.tar.gz.sha256
+          target/blog-wasm.zip
+          target/blog-wasm.zip.sha256
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
