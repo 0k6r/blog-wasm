@@ -20,7 +20,7 @@ jobs:
       run: cargo install wasm-pack
     - name: Build
       run: |
-        npm run install
+        npm install
         npm run build
         cargo build --verbose -p blog-wasm --release
 
