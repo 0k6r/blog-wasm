@@ -5,7 +5,7 @@ use thiserror::Error as ThisError;
 
 /// Define HTTP, deserialize and request errors.
 #[derive(ThisError, Clone, Debug)]
-pub enum Error {
+enum Error {
     /// 401
     #[error("Unauthorized")]
     Unauthorized,

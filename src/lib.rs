@@ -2,7 +2,6 @@
 #![allow(clippy::large_enum_variant)]
 #![allow(clippy::eval_order_dependence)]
 
-mod error;
 mod types;
 mod utils;
 
