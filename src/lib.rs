@@ -2,9 +2,9 @@
 #![allow(clippy::large_enum_variant)]
 #![allow(clippy::eval_order_dependence)]
 
-mod utils;
 mod error;
 mod types;
+mod utils;
 
 use wasm_bindgen::prelude::*;
 use web_logger;
