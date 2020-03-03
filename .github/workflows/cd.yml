@@ -25,15 +25,13 @@ jobs:
         cargo build --verbose -p blog-wasm --release
 
     - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@v2.0.7
+      uses: easingthemes/ssh-deploy@v2.0.8
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SOURCE: "dist/"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
-      with:
-        CLEAN_EXCLUDE: "[\".gitignore\", \"README.md\"]"
 
     - name: Package
       shell: bash
