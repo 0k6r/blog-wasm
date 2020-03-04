@@ -5,7 +5,7 @@
   "description": "Blog app built with Rust and WebAssembly.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/0k6r/blog_webasm.git"
+    "url": "https://github.com/0k6r/kpetrov.git"
   },
   "license": "Apache-2.0",
   "scripts": {
