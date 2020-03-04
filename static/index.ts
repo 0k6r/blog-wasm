@@ -1,4 +1,3 @@
 // @ts-ignore
-import { run_app } from '../Cargo.toml'
-
-run_app();
+import module from '../Cargo.toml'
+module.run();

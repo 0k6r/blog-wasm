@@ -4,3 +4,4 @@
 ### TODO:
 
 Need create ROADMAP with all plans
+Need fix cd problems
