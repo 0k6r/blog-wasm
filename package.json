@@ -1,21 +1,9 @@
 {
-  "author": "Konstantin Petrov <oku6er@gmail.com>",
-  "name": "kpetrov",
-  "version": "0.0.3",
-  "description": "Blog app built with Rust and WebAssembly.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/0k6r/kpetrov.git"
-  },
-  "license": "Apache-2.0",
+  "private": true,
   "scripts": {
-    "start": "WASM_PACK_PROFILE=dev parcel static/index.html -p 8000 --open",
-    "build": "WASM_PACK_PROFILE=release parcel build static/index.html --public-url ./",
-    "test": "wasm-pack test --node"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-wasm.rs": "^1.2.15",
-    "typescript": "^3.8.3"
+    "install": "cd frontend && yarn install",
+    "build": "cd frontend && yarn run build",
+    "start": "cd frontend && yarn start",
+    "test": "cd frontend && yarn run test"
   }
 }

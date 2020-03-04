@@ -1,30 +1,32 @@
-[package]
-name = "kpetrov"
-keywords = ["web","wasm","webassembly"]
-categories = ["wasm","web-programming"]
-authors = ["Konstantin Petrov <oku6er@gmail.com>"]
-description = "Blog app built with Rust and WebAssembly."
-repository = "https://github.com/0k6r/kpetrov.git"
-license = "Apache-2.0"
-readme = "README.md"
-version = "0.0.1"
-edition = "2018"
+#[package]
+#name = "kpetrov"
+#keywords = ["web","wasm","webassembly"]
+#categories = ["wasm","web-programming"]
+#authors = ["Konstantin Petrov <oku6er@gmail.com>"]
+#description = "Blog app built with Rust and WebAssembly."
+#repository = "https://github.com/0k6r/kpetrov.git"
+#license = "Apache-2.0"
+#readme = "README.md"
+#version = "0.0.1"
+#edition = "2018"
+#
+##[lib]
+##crate-type = ["cdylib"]
+#
+#[badges]
+#maintenance = { status = "actively-developed" }
+#
+#[dependencies]
+##cfg-if = "0.1"
+##wasm-bindgen = "0.2"
+##console_error_panic_hook = { version = "0.1", optional = true }
+##wee_alloc = { version = "0.4", optional = true }
+#serde = { version = "1.0", features = ["derive"] }
+##dotenv = "0.15"
+##failure = "0.1"
+##yew = { version = "0.12.0", features = ["toml", "yaml", "msgpack", "cbor"]}
+##yew-router = "0.9"
+##web-sys = "0.3"
 
-[lib]
-crate-type = ["cdylib"]
-
-[badges]
-maintenance = { status = "actively-developed" }
-
-[dependencies]
-cfg-if = "0.1"
-wasm-bindgen = "0.2"
-console_error_panic_hook = { version = "0.1", optional = true }
-wee_alloc = { version = "0.4", optional = true }
-serde = "1.0"
-serde_derive = "1.0"
-dotenv = "0.15"
-failure = "0.1"
-yew = { version = "0.12.0", features = ["toml", "yaml", "msgpack", "cbor"]}
-yew-router = "0.9"
-web-sys = "0.3"
+[workspace]
+members = ["frontend"]
