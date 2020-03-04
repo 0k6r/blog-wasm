@@ -26,11 +26,11 @@ jobs:
       run: |
         npm install
         npm run build
-        cargo build --verbose -p blog-wasm
+        cargo build --verbose -p kpetrov
     - name: Run tests
       run: |
         npm run test
-        cargo test --verbose -p blog-wasm
+        cargo test --verbose -p kpetrov
     - name: cargo fmt & clippy
       run: |
         cargo fmt --all -- --check
