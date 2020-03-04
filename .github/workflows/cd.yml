@@ -22,7 +22,7 @@ jobs:
       run: |
         npm install
         npm run build
-        cargo build --verbose -p blog-wasm --release
+        cargo build --verbose -p kpetrov --release
 
     - name: Deploy to DigitalOcean
       uses: appleboy/scp-action@master
@@ -32,23 +32,23 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.REMOTE_SSH_KEY }}
         passphrase: ${{ secrets.REMOTE_PASSPHRASE }}
-        source: "./dist/."
+        source: "./dist/*"
         target: ${{ secrets.REMOTE_TARGET }}
 
     - name: Package
       shell: bash
       run: |
-        tar czvf target/blog-wasm.tar.gz dist
-        zip -r target/blog-wasm.zip dist
-        shasum -a 256 target/blog-wasm.tar.gz > target/conduit-wasm.tar.gz.sha256
-        shasum -a 256 target/blog-wasm.zip > target/conduit-wasm.zip.sha256
+        tar czvf target/kpetrov.tar.gz dist
+        zip -r target/kpetrov.zip dist
+        shasum -a 256 target/kpetrov.tar.gz > target/kpetrov.tar.gz.sha256
+        shasum -a 256 target/kpetrov.zip > target/kpetrov.zip.sha256
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          target/blog-wasm.tar.gz
-          target/blog-wasm.tar.gz.sha256
-          target/blog-wasm.zip
-          target/blog-wasm.zip.sha256
+          target/kpetrov.tar.gz
+          target/kpetrov.tar.gz.sha256
+          target/kpetrov.zip
+          target/kpetrov.zip.sha256
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
