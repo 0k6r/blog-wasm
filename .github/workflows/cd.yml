@@ -18,11 +18,29 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install wasm-pack
       run: cargo install wasm-pack
+#    - name: Install Diesil
+#      run: cargo install diesel_cli --force \
+#        --no-default-features --features "postgres"
     - name: Build
       run: |
         npm install
         npm run build
         cargo build --verbose -p kpetrov --release
+
+    - name: Executing remote ssh commands #TODO Use this for migration
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        port: ${{ secrets.REMOTE_PORT }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.REMOTE_SSH_KEY }}
+        script: |
+          while true; do
+            if pg_isready -qh localhost; then break; fi
+          done
+          whoami
+#          diesel migration run \
+#            --database-url postgres://${{ secrets.PG_USERNAME }}:@${{ secrets.PG_URL }}/database
 
     - name: Deploy to DigitalOcean
       uses: appleboy/scp-action@master
@@ -44,6 +62,7 @@ jobs:
         shasum -a 256 target/kpetrov.zip > target/kpetrov.zip.sha256
     - name: Create Release
       uses: softprops/action-gh-release@v1
+      run: echo "Tags are > ${PUSH_TAG_VERSION}"
       with:
         files: |
           target/kpetrov.tar.gz
