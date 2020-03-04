@@ -13,6 +13,7 @@ use wasm_bindgen::prelude::*;
 
 mod app;
 mod component;
+mod route;
 
 pub use app::App;
 

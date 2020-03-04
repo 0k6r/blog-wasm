@@ -1,3 +1,4 @@
+use yew_router::Switch;
 
 /// App routes
 #[derive(Switch, Debug, Clone)]
