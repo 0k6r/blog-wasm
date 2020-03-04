@@ -1,4 +1,5 @@
 #![recursion_limit = "256"]
+#![allow(clippy::eval_order_dependence)]
 
 #[macro_use]
 extern crate cfg_if;
