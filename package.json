@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "install": "cd frontend && yarn install",
-    "build": "cd frontend && yarn run build",
-    "start": "cd frontend && yarn start",
-    "test": "cd frontend && yarn run test"
+    "install": "cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start",
+    "test": "cd frontend && npm run test"
   }
 }

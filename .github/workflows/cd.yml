@@ -38,8 +38,8 @@ jobs:
     - name: Package
       shell: bash
       run: |
-        tar czvf target/kpetrov.tar.gz dist
-        zip -r target/kpetrov.zip dist
+        tar czvf target/kpetrov.tar.gz frontend/dist
+        zip -r target/kpetrov.zip frontend/dist
         shasum -a 256 target/kpetrov.tar.gz > target/kpetrov.tar.gz.sha256
         shasum -a 256 target/kpetrov.zip > target/kpetrov.zip.sha256
     - name: Create Release
