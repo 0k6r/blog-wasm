@@ -1,16 +1,9 @@
-use crate::component::header::Header;
+use crate::components::header::Header;
 use yew::prelude::*;
-use yew_router::{prelude::*, route::Route, switch::Permissive, Switch};
+use yew_router::{prelude::*, route::Route, switch::Permissive};
 
 pub struct App;
-
-#[derive(Switch, Debug, Clone)]
-enum AppRouter {
-    #[to = "/!"]
-    RootPath,
-    #[to = "/page-not-found"]
-    PageNotFound(Permissive<String>),
-}
+use crate::routes::AppRoute;
 
 impl Component for App {
     type Message = ();
@@ -29,16 +22,16 @@ impl Component for App {
             <>
                 <Header />
                 <div>
-                    <Router<AppRouter, ()>
-                        render = Router::render(|switch: AppRouter | {
+                    <Router<AppRoute, ()>
+                        render = Router::render(|switch: AppRoute | {
                             match switch {
-                                AppRouter::RootPath => html!{<h2>{"Home"}</h2>},
-                                AppRouter::PageNotFound(Permissive(None)) => html!{"Page not found"},
-                                AppRouter::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
+                                AppRoute::Home => html!{<h2>{"Home"}</h2>},
+                                AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
+                                AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
                             }
                         } )
                         redirect = Router::redirect(|route: Route<()>| {
-                            AppRouter::PageNotFound(Permissive(Some(route.route)))
+                            AppRoute::PageNotFound(Permissive(Some(route.route)))
                         })
                     />
                 </div>

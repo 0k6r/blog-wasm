@@ -1,3 +1,3 @@
 //! The core library
 
-pub mod protocol;
+pub mod models;

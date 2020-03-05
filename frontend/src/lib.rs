@@ -12,8 +12,8 @@ extern crate yew_router;
 use wasm_bindgen::prelude::*;
 
 mod app;
-mod component;
-mod route;
+mod components;
+mod routes;
 
 pub use app::App;
 

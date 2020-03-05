@@ -1,6 +1,5 @@
-use crate::route::AppRoute;
-use kpetrov::protocol::model::UserInfo;
-use yew::{html, Component, ComponentLink, Html, Properties, ShouldRender};
+use crate::routes::AppRoute;
+use yew::{html, Component, ComponentLink, Html, ShouldRender};
 use yew_router::prelude::*;
 
 pub struct Header {}
