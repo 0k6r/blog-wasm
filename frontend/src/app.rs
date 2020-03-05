@@ -1,4 +1,4 @@
-use crate::components::header::Header;
+use crate::components::{header::Header, footer::Footer};
 use yew::prelude::*;
 use yew_router::{prelude::*, route::Route, switch::Permissive};
 
@@ -35,6 +35,7 @@ impl Component for App {
                         })
                     />
                 </div>
+                <Footer />
             </>
         }
     }
