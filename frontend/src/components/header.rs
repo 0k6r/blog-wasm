@@ -20,35 +20,50 @@ impl Component for Header {
 
     fn view(&self) -> Html {
         html! {
-            <nav class="navbar navbar-light">
-                <div class="container">
-                    <RouterAnchor<AppRoute> route=AppRoute::Home classes="navbar-brand">
-                        { "KPetrov" }
-                    </RouterAnchor<AppRoute>>
-                    <ul class="nav navbar-nav pull-xs-right">
-                        <li class="nav-item">
-                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
-                                { "Home" }
+            <template>
+                <div class="wrapper">
+                    <header>
+                        <h1 class="logo">
+                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="navbar-brand">
+                                { "KONSTANTIN PETROV" }
                             </RouterAnchor<AppRoute>>
-                        </li>
-                        <li class="nav-item">
-                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
-                                { "About" }
-                            </RouterAnchor<AppRoute>>
-                        </li>
-                        <li class="nav-item">
-                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
-                                { "Blog" }
-                            </RouterAnchor<AppRoute>>
-                        </li>
-                        <li class="nav-item">
-                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
-                                { "Contact" }
-                            </RouterAnchor<AppRoute>>
-                        </li>
-                    </ul>
+                        </h1>
+                        <input class="switcher" type="checkbox" id="menu" />
+                        <label class="open" for="menu">
+                            <h2>{ "MENU" }</h2>
+                        </label>
+                        <nav>
+                            <div class="nav-menu">
+                                <ul>
+                                    <li>
+                                        <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                            { "Home" }
+                                        </RouterAnchor<AppRoute>>
+                                    </li>
+                                    <li>
+                                        <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                            { "About" }
+                                        </RouterAnchor<AppRoute>>
+                                    </li>
+                                    <li>
+                                        <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                            { "Blog" }
+                                        </RouterAnchor<AppRoute>>
+                                    </li>
+                                    <li>
+                                        <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                            { "Contact" }
+                                        </RouterAnchor<AppRoute>>
+                                    </li>
+                                </ul>
+                            </div>
+                            <label class="close" for="menu">
+                                <i class="fa fa-times"></i>
+                            </label>
+                        </nav>
+                    </header>
                 </div>
-            </nav>
+            </template>
         }
     }
 }

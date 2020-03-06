@@ -19,24 +19,29 @@ impl Component for App {
 
     fn view(&self) -> Html {
         html! {
-            <>
-                <Header />
-                <div>
-                    <Router<AppRoute, ()>
-                        render = Router::render(|switch: AppRoute | {
-                            match switch {
-                                AppRoute::Home => html!{<h2>{"Home"}</h2>},
-                                AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
-                                AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
-                            }
-                        } )
-                        redirect = Router::redirect(|route: Route<()>| {
-                            AppRoute::PageNotFound(Permissive(Some(route.route)))
-                        })
-                    />
+            <template>
+                <h1>{ "ASD"}</h1>
+                <div class="app">
+                    <div id="wrapper">
+                        <Header />
+                        <div>
+                            <Router<AppRoute, ()>
+                                render = Router::render(|switch: AppRoute | {
+                                    match switch {
+                                        AppRoute::Home => html!{<h2>{"Home"}</h2>},
+                                        AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
+                                        AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
+                                    }
+                                } )
+                                redirect = Router::redirect(|route: Route<()>| {
+                                    AppRoute::PageNotFound(Permissive(Some(route.route)))
+                                })
+                            />
+                        </div>
+                        <Footer />
+                    </div>
                 </div>
-                <Footer />
-            </>
+            </template>
         }
     }
 }
