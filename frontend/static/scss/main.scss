@@ -72,10 +72,11 @@ section,
 
 .wrapper {
   display: flex;
+  max-width: $smDesktopWidth;
   flex-direction: column;
   margin: 10px auto;
   min-height: 100vh;
-  padding: 75px;
+  //padding: 75px;
 }
 
 .content-wrapper {

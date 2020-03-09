@@ -24,10 +24,26 @@ impl Component for Footer {
             <footer>
                 <div class="ft-menu">
                     <ul>
-                      <li><a href="#">{ "Home" }</a></li>
-                      <li><a href="#">{ "About" }</a></li>
-                      <li><a href="#">{ "Blog" }</a></li>
-                      <li><a href="#">{ "Contact" }</a></li>
+                        <li>
+                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                { "HOME" }
+                            </RouterAnchor<AppRoute>>
+                        </li>
+                        <li>
+                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                { "ABOUT" }
+                            </RouterAnchor<AppRoute>>
+                        </li>
+                        <li>
+                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                { "BLOG" }
+                            </RouterAnchor<AppRoute>>
+                        </li>
+                        <li>
+                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                { "CONTACT" }
+                            </RouterAnchor<AppRoute>>
+                        </li>
                     </ul>
                 </div>
                 // <RouterAnchor<AppRoute> route=AppRoute::Home classes="logo-font">{ "KPetrov" }</RouterAnchor<AppRoute>>
@@ -38,9 +54,9 @@ impl Component for Footer {
 			            </a>
 			        </li>
 			        <li>
-			            <a chref="#" aria-label="GitHub">
-			                <i class="fa fa-github-square fa-fw" title="GitHub"></i>
-			            </a>
+			            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                            <i class="fa fa-github-square fa-fw" title="GitHub"></i>
+                        </RouterAnchor<AppRoute>>
 			        </li>
 			        <li>
 			            <a href="#" aria-label="LinkedIn">
@@ -49,14 +65,24 @@ impl Component for Footer {
 			        </li>
 	            </ul>
 
-                <ul class="ft-legal">
-                    <li><a href="#">{ "Terms & Conditions" }</a></li>
-                    <li><a href="#">{ "Privacy Policy" }</a></li>
-                    <li>
-                        { "© 2020 Konstantin Petrov. All rights reserved. \
-                        Code licensed under Apache 2.0" }
-                    </li>
-                </ul>
+                <div class="ft-legal">
+                    <ul>
+                        <li>
+                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                { "Terms & Conditions" }
+                            </RouterAnchor<AppRoute>>
+                        </li>
+                        <li>
+                            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
+                                { "Privacy Policy" }
+                            </RouterAnchor<AppRoute>>
+                        </li>
+                        <li>
+                            { "© 2020 Konstantin Petrov. All rights reserved. \
+                            Code licensed under Apache 2.0" }
+                        </li>
+                    </ul>
+                </div>
             </footer>
         }
     }

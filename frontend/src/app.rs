@@ -19,24 +19,22 @@ impl Component for App {
 
     fn view(&self) -> Html {
         html! {
-            <>
+            <div class="wrapper">
                 <Header />
-                    <div class="container">
-                        <Router<AppRoute, ()>
-                            render = Router::render(|switch: AppRoute | {
-                                match switch {
-                                    AppRoute::Home => html!{<h2>{"Home"}</h2>},
-                                    AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
-                                    AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
-                                }
-                            } )
-                            redirect = Router::redirect(|route: Route<()>| {
-                                AppRoute::PageNotFound(Permissive(Some(route.route)))
-                            })
-                        />
-                    </div>
+                    <Router<AppRoute, ()>
+                        render = Router::render(|switch: AppRoute | {
+                            match switch {
+                                AppRoute::Home => html!{<h2>{"Home"}</h2>},
+                                AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
+                                AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
+                            }
+                        } )
+                        redirect = Router::redirect(|route: Route<()>| {
+                            AppRoute::PageNotFound(Permissive(Some(route.route)))
+                        })
+                    />
                 <Footer />
-            </>
+            </div>
         }
     }
 }
