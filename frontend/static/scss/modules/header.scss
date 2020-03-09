@@ -27,7 +27,7 @@ header {
     font-size: $logoFontSize;
     font-weight: $logoFontWeight;
     color: $logoFontColor;
-    // justify-content: flex-start;
+    //justify-content: flex-start;
   }
 
   label {
@@ -49,10 +49,10 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 400px;
-    letter-spacing: 1px;
+    font-weight: 400;
+    letter-spacing: 4px;
     padding: 21.4px 0;
-    margin-left: 30px;
+    margin-right: 30px;
     transition: 0.4s;
     color: #999;
     cursor: pointer;
@@ -61,7 +61,6 @@ header {
       color: #111;
     }
 
-    // TODO Need fix active link
     .router-link-active {
       color: #111;
     }
