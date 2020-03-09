@@ -46,24 +46,25 @@ impl Component for Footer {
                         </li>
                     </ul>
                 </div>
-                // <RouterAnchor<AppRoute> route=AppRoute::Home classes="logo-font">{ "KPetrov" }</RouterAnchor<AppRoute>>
-		        <ul class="ft-social">
-			        <li>
-			            <a href="#" aria-label="Twitter">
-			                <i class="fa fa-twitter fa-fw" title="Twitter"></i>
-			            </a>
-			        </li>
-			        <li>
-			            <RouterAnchor<AppRoute> route=AppRoute::Home classes="nav-link">
-                            <i class="fa fa-github-square fa-fw" title="GitHub"></i>
-                        </RouterAnchor<AppRoute>>
-			        </li>
-			        <li>
-			            <a href="#" aria-label="LinkedIn">
-			                <i class="fa fa-linkedin fa-fw" title="LinkedIn"></i>
-			            </a>
-			        </li>
-	            </ul>
+                <div class="ft-social">
+		            <ul>
+			            <li>
+			                <a href="https://twitter.com/Oku6er" aria-label="Twitter">
+			                    <i class="fa fa-twitter fa-fw" title="Twitter"></i>
+			                </a>
+			            </li>
+			            <li>
+			                <a href="https://github.com/0k6r" aria-label="GitHub">
+                                <i class="fa fa-github-square fa-fw" title="GitHub"></i>
+                            </a>
+			            </li>
+			            <li>
+			                <a href="https://www.linkedin.com/in/konstantin-petrov/" aria-label="LinkedIn">
+			                    <i class="fa fa-linkedin fa-fw" title="LinkedIn"></i>
+			                </a>
+			            </li>
+	                </ul>
+	            </div>
 
                 <div class="ft-legal">
                     <ul>

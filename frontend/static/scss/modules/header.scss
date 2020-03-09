@@ -16,9 +16,10 @@ header {
     display: flex;
     justify-content: flex-start;
     letter-spacing: 0.0169492em;
-    font-size: $logoFontSize;
-    font-weight: $logoFontWeight;
-    color: $logoFontColor;
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.4;
   }
 
   label {
@@ -63,6 +64,7 @@ header {
     padding: 0 45px;
 
     .logo {
+      font-size: 40px;
       justify-content: center;
     }
 
@@ -97,9 +99,10 @@ header {
       flex-direction: column;
 
       li .nav-link {
-        padding: 20px;
+        justify-content: center;
         cursor: pointer;
         color: #a8a8a8;
+        //margin: 10px auto;
 
         &:hover {
           background-color: rgba($color: #111, $alpha: 0.03);
@@ -109,6 +112,17 @@ header {
           color: #111;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: $phoneWidth) {
+  header {
+    padding: 0 35px;
+
+    .logo {
+      font-size: 25px;
+      justify-content: center;
     }
   }
 }
