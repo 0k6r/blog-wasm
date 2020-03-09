@@ -97,11 +97,11 @@ section,
   }
   @media screen and (max-width: $tableWidth) {
     max-width: $phoneWidth;
-    padding: 28px 0;
+    padding: 20px 0;
   }
   @media screen and (max-width: $phoneWidth) {
     max-width: $smPhoneWidth;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 }
 

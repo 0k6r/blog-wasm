@@ -22,7 +22,7 @@ impl Component for Header {
         html! {
             <header>
                 <h1 class="logo">
-                    <RouterAnchor<AppRoute> route=AppRoute::Home classes="navbar-brand">
+                    <RouterAnchor<AppRoute> route=AppRoute::Home>
                         { "KONSTANTIN PETROV" }
                     </RouterAnchor<AppRoute>>
                 </h1>
