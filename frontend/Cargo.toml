@@ -30,3 +30,6 @@ yew = { version = "0.12.0", features = ["toml", "yaml", "msgpack", "cbor"]}
 yew-router = "0.9"
 web-sys = "0.3"
 kpetrov = { version = "0.0.1", path = ".." }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.8"

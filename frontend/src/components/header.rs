@@ -28,7 +28,7 @@ impl Component for Header {
                 </h1>
                 <input class="switcher" type="checkbox" id="menu" />
                 <label class="open" for="menu">
-                    <h2>{ "MENU" }</h2>
+                    <i class="fa fa-bars"></i>
                 </label>
                 <nav>
                     <div class="nav-menu">

@@ -21,18 +21,20 @@ impl Component for App {
         html! {
             <div class="wrapper">
                 <Header />
-                    <Router<AppRoute, ()>
-                        render = Router::render(|switch: AppRoute | {
-                            match switch {
-                                AppRoute::Home => html!{<h2>{"Home"}</h2>},
-                                AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
-                                AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
-                            }
-                        } )
-                        redirect = Router::redirect(|route: Route<()>| {
-                            AppRoute::PageNotFound(Permissive(Some(route.route)))
-                        })
-                    />
+                    <div class="content-wrapper">
+                        <Router<AppRoute, ()>
+                            render = Router::render(|switch: AppRoute | {
+                                match switch {
+                                    AppRoute::Home => html!{<h2>{"This page is WIP"}</h2>},
+                                    AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
+                                    AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
+                                }
+                            } )
+                            redirect = Router::redirect(|route: Route<()>| {
+                                AppRoute::PageNotFound(Permissive(Some(route.route)))
+                            })
+                        />
+                    </div>
                 <Footer />
             </div>
         }
