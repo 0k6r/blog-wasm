@@ -78,11 +78,11 @@ impl Component for Footer {
                                 { "Privacy Policy" }
                             </RouterAnchor<AppRoute>>
                         </li>
-                        <li>
-                            { "© 2020 Konstantin Petrov. All rights reserved. \
-                            Code licensed under Apache 2.0" }
-                        </li>
                     </ul>
+                    <p>
+                        { "© 2020 Konstantin Petrov. All rights reserved. \
+                            Code licensed under Apache 2.0" }
+                    </p>
                 </div>
             </footer>
         }

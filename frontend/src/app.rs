@@ -19,24 +19,26 @@ impl Component for App {
 
     fn view(&self) -> Html {
         html! {
-            <div class="wrapper">
-                <Header />
-                    <div class="content-wrapper">
-                        <Router<AppRoute, ()>
-                            render = Router::render(|switch: AppRoute | {
-                                match switch {
-                                    AppRoute::Home => html!{<h2>{"This page is WIP"}</h2>},
-                                    AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
-                                    AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
-                                }
-                            } )
-                            redirect = Router::redirect(|route: Route<()>| {
-                                AppRoute::PageNotFound(Permissive(Some(route.route)))
-                            })
-                        />
-                    </div>
+            <>
+                <div class="wrapper">
+                    <Header />
+                        <div class="content-wrapper">
+                            <Router<AppRoute, ()>
+                                render = Router::render(|switch: AppRoute | {
+                                    match switch {
+                                        AppRoute::Home => html!{<h2>{"This page is WIP"}</h2>},
+                                        AppRoute::PageNotFound(Permissive(None)) => html!{"Page not found"},
+                                        AppRoute::PageNotFound(Permissive(Some(missed_route))) => html!{format!("Page '{}' not found", missed_route)}
+                                    }
+                                } )
+                                redirect = Router::redirect(|route: Route<()>| {
+                                    AppRoute::PageNotFound(Permissive(Some(route.route)))
+                                })
+                            />
+                        </div>
+                </div>
                 <Footer />
-            </div>
+            </>
         }
     }
 }
