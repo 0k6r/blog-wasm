@@ -9,13 +9,13 @@ html {
   color: $mainFontColor;
   height: 100%;
   @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
+    font-size: rem(16px, 1rem);
   }
   @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
+    font-size: rem(15px, 1rem);
   }
   @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
+    font-size: rem(14px, 1rem);
   }
 }
 
@@ -64,52 +64,31 @@ li {
 section,
 .section {
   position: relative;
-  padding: 40px 0;
+  padding: rem(40px, 1rem) 0;
   @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
+    padding: rem(36px, 1rem) 0;
   }
   @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
+    padding: rem(28px, 1rem) 0;
   }
   @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
+    padding: rem(20px, 1rem) 0;
   }
 }
 
 .wrapper {
   display: flex;
-  max-width: $smDesktopWidth - 20px;
+  max-width: rem($smDesktopWidth, 1.25rem);
   flex-direction: column;
-  margin: 10px auto;
+  margin: 0.625rem auto;
   min-height: 100vh;
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.container {
-  width: 100%;
-  flex: 0 0 auto;
-  position: relative;
-  padding: 40px 0;
-  margin: 0 auto;
-  max-width: $tableWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-    padding: 20px 0;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
-    padding: 10px 0;
-  }
 }
 
 // Modules
