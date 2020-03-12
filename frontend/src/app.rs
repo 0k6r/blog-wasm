@@ -1,4 +1,4 @@
-use crate::components::{header::Header, footer::Footer};
+use crate::components::{footer::Footer, header::Header};
 use yew::prelude::*;
 use yew_router::{prelude::*, route::Route, switch::Permissive};
 

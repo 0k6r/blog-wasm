@@ -47,24 +47,24 @@ impl Component for Footer {
                     </ul>
                 </div>
                 <div class="ft-social">
-		            <ul>
-			            <li>
-			                <a href="https://twitter.com/Oku6er" aria-label="Twitter">
-			                    <i class="fa fa-twitter fa-fw" title="Twitter"></i>
-			                </a>
-			            </li>
-			            <li>
-			                <a href="https://github.com/0k6r" aria-label="GitHub">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/Oku6er" aria-label="Twitter">
+                                <i class="fa fa-twitter fa-fw" title="Twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/0k6r" aria-label="GitHub">
                                 <i class="fa fa-github-square fa-fw" title="GitHub"></i>
                             </a>
-			            </li>
-			            <li>
-			                <a href="https://www.linkedin.com/in/konstantin-petrov/" aria-label="LinkedIn">
-			                    <i class="fa fa-linkedin fa-fw" title="LinkedIn"></i>
-			                </a>
-			            </li>
-	                </ul>
-	            </div>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/konstantin-petrov/" aria-label="LinkedIn">
+                                <i class="fa fa-linkedin fa-fw" title="LinkedIn"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="ft-legal">
                     <ul>
