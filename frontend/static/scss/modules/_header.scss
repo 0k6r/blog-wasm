@@ -83,20 +83,21 @@ header {
       transition: 0.7s;
     }
 
-    .open {
+    .open, .close {
       display: flex;
-      align-items: stretch;
       font-size: 2.2rem;
+    }
+
+    .open {
+      align-items: stretch;
       padding-right: 0.625rem;
     }
 
     .close {
-      display: flex;
       justify-content: flex-end;
       align-content: center;
       flex-wrap: wrap;
       padding-right: 1.25rem;
-      font-size: 2.2rem;
     }
 
 

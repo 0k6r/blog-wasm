@@ -19,6 +19,10 @@ impl Component for Footer {
         true
     }
 
+    fn change(&mut self, _props: Self::Properties) -> bool {
+        false
+    }
+
     fn view(&self) -> Html {
         html! {
             <footer>
