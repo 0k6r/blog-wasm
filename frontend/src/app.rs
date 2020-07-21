@@ -36,7 +36,7 @@ impl Component for App {
 
     fn update(&mut self, msg: Self::Message) -> ShouldRender {
         match msg {
-            Msg::Route(mut route) => {
+            Msg::Route(route) => {
                 self.current_route = AppRoute::switch(route)
             }
         }

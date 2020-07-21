@@ -9,13 +9,13 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "start": "WASM_PACK_PROFILE=dev parcel static/index.html -p 8000 --open",
     "build": "WASM_PACK_PROFILE=release parcel build static/index.html --public-url ./",
+    "start": "WASM_PACK_PROFILE=dev parcel static/index.html -p 8000 --open",
     "test": "wasm-pack test --headless --safari --chrome --firefox"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-wasm.rs": "^1.2.15",
+    "parcel-plugin-wasm.rs": "^1.2.16",
     "sass": "^1.26.2",
     "typescript": "^3.8.3",
     "minimist": "^1.2.5",
