@@ -12,6 +12,7 @@ use web_logger;
 pub mod app;
 pub mod components;
 pub mod routes;
+pub mod nes;
 
 use app::App;
 
