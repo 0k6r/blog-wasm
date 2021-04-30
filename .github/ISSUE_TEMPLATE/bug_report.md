@@ -2,8 +2,8 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
-assignees: ''
+labels: 'bug'
+assignees: '0k6r'
 
 ---
 
@@ -29,8 +29,8 @@ If applicable, add screenshots to help explain your problem.
  - Version [e.g. 22]
 
 **Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
+ - Device: [e.g. iPhoneXR]
+ - OS: [e.g. iOS12.1]
  - Browser [e.g. stock browser, safari]
  - Version [e.g. 22]
 
