@@ -14,7 +14,6 @@ pub enum Msg {
 }
 
 use crate::routes::{
-    fix_fragment_routes,
     AppRoute,
 };
 
@@ -26,7 +25,6 @@ impl Component for App {
         let router_agent = RouteAgent::bridge(link.callback(Msg::Route));
         let route_service: RouteService = RouteService::new();
         let mut route = route_service.get_route();
-        fix_fragment_routes(&mut route);
         App {
             current_route: AppRoute::switch(route),
             router_agent,

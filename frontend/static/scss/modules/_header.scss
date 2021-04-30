@@ -80,7 +80,7 @@ header {
       top: 0;
       text-align: center;
       padding: 0.625rem 0;
-      transition: 0.7s;
+      transition: 0.3s;
     }
 
     .open, .close {
@@ -118,11 +118,11 @@ header {
           color: #a8a8a8;
 
           &:hover {
-            background-color: red;
+            background-color: $neutral-secondary;
           }
 
           &:active {
-            color: #111;
+            color: $mainFontColor;
           }
         }
       }
