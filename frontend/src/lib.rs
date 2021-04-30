@@ -13,6 +13,7 @@ pub mod app;
 pub mod components;
 pub mod routes;
 pub mod nes;
+pub mod tiny_render;
 
 use app::App;
 
